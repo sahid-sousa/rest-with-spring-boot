@@ -1,0 +1,38 @@
+services:
+  db:
+    image: mysql:8.0.29
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: rest_with_spring_boot
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    ports:
+      - "3306:3306"
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uadmin", "-padmin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+  app:
+    build: .
+    container_name: rest_with_spring_boot
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DATASOURCE_URL=jdbc:mysql://db:3306/rest_with_spring_boot?useTimeZone=true&serverTimeZone=UTC
+      - DATASOURCE_USERNAME=admin
+      - DATASOURCE_PASSWORD=admin
+      - DATASOURCE_DBCREATE=update
+    ports:
+      - "8080:8080"
+    networks:
+      - app_network
+networks:
+  app_network:
+    driver: bridge

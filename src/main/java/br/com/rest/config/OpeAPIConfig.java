@@ -14,9 +14,9 @@ public class OpeAPIConfig {
         return new OpenAPI()
                 .info(
                         new Info()
-                                .title("Hello Swagger OpenAPI")
+                                .title("Projeto de API REST desenvolvido com Spring Boot Java 21 e MSQL8")
                                 .version("v1")
-                                .description("Some description about Swagger OpenAPI")
+                                .description("Projeto de API REST com Spring Boot Java 21 e MSQL8")
                                 .termsOfService("")
                                 .license(new License()
                                         .name("Apache 2.0")

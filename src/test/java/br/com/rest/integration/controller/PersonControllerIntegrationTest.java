@@ -185,7 +185,7 @@ class PersonControllerIntegrationTest extends AbstractIntegrationTest {
     @Test
     @Order(5)
     @DisplayName("integration test given Person Object when delete should return a no content")
-    public void integrationTestGivenPersonObject_when_delete_ShouldReturnANoContent() throws JsonProcessingException {
+    public void integrationTestGivenPersonObject_when_delete_ShouldReturnANoContent() {
         given().spec(specification)
                 .pathParam("id", person.getId())
                 .when()
