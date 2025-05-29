@@ -1,14 +1,13 @@
+server:
+  port: 8888
 spring:
   application:
     name: rest-with-spring-boot
   datasource:
-    url: jdbc:h2~/rest_with_spring_boot_test;DB_CLOSE_ON_EXIT=FALSE
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
-#  jpa:
-#    hibernate:
-#      ddl-auto: update
-#    properties:
-#      hibernate:
-#        show_sql: false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: false

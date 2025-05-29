@@ -15,7 +15,7 @@ public class PersonService {
 
     PersonRepository repository;
 
-    private Logger logger = Logger.getLogger(PersonService.class.getName());
+    private final Logger logger = Logger.getLogger(PersonService.class.getName());
 
     public PersonService(PersonRepository repository) {
         this.repository = repository;
@@ -48,6 +48,7 @@ public class PersonService {
         entity.setFirstName(person.getFirstName());
         entity.setLastName(person.getLastName());
         entity.setAddress(person.getAddress());
+        entity.setEmail(person.getEmail());
         entity.setGender(person.getGender());
 
         return repository.save(entity);

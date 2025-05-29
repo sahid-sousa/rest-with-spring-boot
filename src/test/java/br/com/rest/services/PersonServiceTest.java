@@ -73,7 +73,7 @@ public class PersonServiceTest {
         given(repository.findAll()).willReturn(List.of(person));
 
         //When
-        List<Person> persons = service.findAll();;
+        List<Person> persons = service.findAll();
 
         //Then
         assertNotNull(persons);
