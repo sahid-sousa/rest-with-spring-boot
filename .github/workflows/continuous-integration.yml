@@ -32,7 +32,7 @@ jobs:
       
     - name: Push to Docker Hbu Container Registry
       run: |
-        docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-app:latest ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-app:${{ github.run_id }}
+        docker tag rest-with-spring-boot-app:latest ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-app:${{ github.run_id }}
         docker push ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-app:${{ github.run_id }}
         docker push ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-app:latest
         
