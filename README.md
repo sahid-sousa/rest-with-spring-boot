@@ -1,3 +1,5 @@
+[![Continuous Integration With Github Actions](https://github.com/sahid-sousa/rest-with-spring-boot/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/sahid-sousa/rest-with-spring-boot/actions/workflows/continuous-integration.yml)
+
 # rest-with-spring-boot
 
 Projeto de API REST desenvolvido com **Spring Boot** e configurada para rodar em containers Docker utilizando `docker-compose`.
