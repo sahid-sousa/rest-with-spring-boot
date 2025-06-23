@@ -30,7 +30,7 @@ jobs:
     - name: Docker Compose Build Application JAR
       run: docker compose build 
       
-    - name: Push to Docker Hbu Container Registry
+    - name: Push to Docker Hub Container Registry
       run: |
         docker tag rest-with-spring-boot-app:latest ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-app:${{ github.run_id }}
         docker tag rest-with-spring-boot-app:latest ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-app:latest
