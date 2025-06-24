@@ -1,3 +1,7 @@
+![Java 21](https://img.shields.io/badge/Java-21-blue?logo=java&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-Build%20Tool-C71A36?logo=apachemaven&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-6DB33F?logo=springboot&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
 [![Continuous Integration With Github Actions](https://github.com/sahid-sousa/rest-with-spring-boot/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/sahid-sousa/rest-with-spring-boot/actions/workflows/continuous-integration.yml)
 
 # rest-with-spring-boot
@@ -61,12 +65,12 @@ http://localhost:8080/swagger-ui/index.html
 
 A aplicação está configurada para utilizar as seguintes variáveis de ambiente:
 
-| Variável                | Valor                                                    |
-|------------------------|-----------------------------------------------------------|
-| `DATASOURCE_URL`       | `jdbc:mysql://db:3306/rest_with_spring_boot?...`          |
-| `DATASOURCE_USERNAME`  | `admin`                                                   |
-| `DATASOURCE_PASSWORD`  | `admin`                                                   |
-| `DATASOURCE_DBCREATE`  | `update`                                                  |
+| Variável              | Valor                                            |
+|-----------------------|--------------------------------------------------|
+| `DATASOURCE_URL`      | `jdbc:mysql://db:3306/rest_with_spring_boot?...` |
+| `DATASOURCE_USERNAME` | `admin`                                          |
+| `DATASOURCE_PASSWORD` | `admin`                                          |
+| `DATASOURCE_DBCREATE` | `update`                                         |
 
 > Essas variáveis são passadas automaticamente via `docker-compose.yml`.
 
